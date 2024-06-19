@@ -1,0 +1,251 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Sevillana&display=swap');
+
+@font-face {
+    font-family: "pelu";
+    src: url("../assets/fonts/PoetsenOne-Regular.ttf");
+}
+
+/* RESET DE LOS ESTILOS POR DEFECTO DEL NAVEGADOR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+/* ESTILOS BASE */
+body {
+    background-color: #EADFB4;
+}
+
+h1,h2,h3 {
+    font-family: "pelu";
+}
+
+a {
+    font-family: "Sevillana", cursiva;
+}
+
+header {
+    background-color: #9bb0c1;
+    /* height: 15vh; */
+    position: sticky;
+    top: 0;
+    /* z-index: 1; */
+    padding: 1rem;
+}
+
+
+.link {
+    font-family: "Sevillana", cursiva;
+    font-size: 2em;
+    color: #51829B;
+}
+
+
+/* Estilos Cabecera de las 5 páginas */
+.titulo-principal {
+    padding: 1rem;
+    color: #51829B;
+   }   
+
+/* .item-menu {
+    display: inline-block;
+    padding-left: 20px;
+} */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.logo {
+    width: 5rem;
+}
+
+
+/*ESTILOS Footer*/
+/* .piePagina {
+    background-color: #9bb0c1;
+} */
+
+/* ESTILOS DEL INDEX */
+/* .img-principal {
+    display: flex;
+} */
+
+
+/* ESTILOS DE Quienes Somos */
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+            "main"
+            "footer";
+            align-items:stretch;
+}
+
+.box {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main {
+    grid-area: main
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+/* ESTILOS DE Nuestro Trabajo */
+/* .img-trabajo {
+    width: 100%;
+} */
+
+.container-tarjetas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+                "uno    dos   tres"
+                "cuatro cinco seis"
+                "siete  ocho  nueve"
+                "diez   once  doce";
+    gap: 1rem;            
+    margin-top: 1rem;            
+}
+
+.tarjeta {
+    background-color: #F6995C;
+    /* margin-bottom: 20px; */
+    /* width: 300px; */
+    /* height: 500px; */
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.tarjeta-uno {
+    grid-area: uno;
+}
+
+.tarjeta-dos {
+    grid-area: dos;
+}
+
+.tarjeta-tres {
+    grid-area: tres;
+}
+
+.tarjeta-cuatro {
+    grid-area: cuatro;
+}
+
+.tarjeta-cinco {
+    grid-area: cinco;
+}
+
+.tarjeta-seis {
+    grid-area: seis;
+}
+
+.tarjeta-siete {
+    grid-area: siete;
+}
+
+.tarjeta-ocho {
+    grid-area: ocho; 
+}
+
+.tarjeta-nueve {
+    grid-area: nueve; 
+}
+
+.tarjeta-diez {
+    grid-area: diez; 
+}
+
+.tarjeta-once {
+    grid-area: once; 
+}
+
+.tarjeta-doce {
+    grid-area: doce; 
+}
+
+
+/* ESTILOS de Turnos */
+input {
+    display: block;
+    margin: 10px;
+}
+
+
+/* MEDIA QUERYS */
+
+@media (max-width: 1250px) {
+.container-tarjetas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6,1fr);
+    grid-template-areas: 
+                "uno    dos"
+                "tres   cuatro"
+                "cinco  seis"
+                "siete  ocho"
+                "nueve  diez"
+                "once  doce";
+    gap: 1rem;            
+    margin-top: 1rem;            
+}
+}
+
+@media (max-width: 930px) {
+    .container-tarjetas {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12,1fr);
+        grid-template-areas: 
+                    "uno"
+                    "dos"
+                    "tres"
+                    "cuatro"
+                    "cinco"
+                    "seis"
+                    "siete"
+                    "ocho"
+                    "nueve"
+                    "diez"
+                    "once"
+                    "doce";
+        gap: 1rem;            
+        margin-top: 1rem;            
+    }
+    }
